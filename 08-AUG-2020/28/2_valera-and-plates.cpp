@@ -1,0 +1,44 @@
+
+// https://codeforces.com/problemset/problem/369/A
+
+#include<bits/stdc++.h>
+
+using namespace std;
+
+#define fast ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+typedef long long ll;
+typedef pair<int, int> ii;
+typedef vector<ii> vii;
+typedef vector<int> vi;
+#define INF 1000000000
+#define pb push_back
+#define mk make_pair
+
+#define flu(i, s, e) for(int i = s; i < e; i++)
+#define fld(i, s, e) for(int i = s; i >= e; i--)
+
+
+int32_t main()
+{
+    // fast;
+    // freopen("input.txt", "r", stdin);
+    // freopen("myoutput.txt", "w", stdout);
+
+    int n, m, k;
+    scanf("%d%d%d", &n, &m, &k);
+
+    int temp, f(0), s(0);
+    flu(i, 0, n)
+    {
+        scanf("%d", &temp);
+        temp == 1 ? f++ : s++;
+    }
+
+    int ans(0);
+    f >= m ? ans = f - m, m = 0 : m -= f;
+    if(s > k + m) ans += (s - k - m);
+
+    printf("%d\n", ans);
+
+    return 0;
+}
