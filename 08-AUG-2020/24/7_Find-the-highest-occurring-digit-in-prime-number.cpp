@@ -1,5 +1,6 @@
 
-// https://practice.geeksforgeeks.org/problems/return-two-prime-numbers/0
+// https://practice.geeksforgeeks.org/problems/find-the-highest-occurring-digit-in-prime-numbers-in-a-range/0
+
 
 #include<bits/stdc++.h>
 using namespace std;
